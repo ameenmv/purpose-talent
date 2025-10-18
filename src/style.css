@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap");
+
+:root {
+  --bg-color: #f8f3e9;
+  --black: #1e1e1e;
+  --light-brown: #a79785;
+  --white: white;
+  --yellow: #f0b420;
+  --purple: #b0a5f4;
+  --red: #f36c5a;
+  --light-brown-gray: #f2e8dc;
+  --gray: #fffaf3;
+  --light-black: #403f3e;
+  --dark-brown-gray: #e8ddd0;
+
+  --cairo: "Cairo Play", "sans-serif";
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg--color);
+}
+
+.containerr {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem; /* 16px */
+  padding-right: 2rem;
+}
+
+/* Small (sm) ≥ 640px */
+@media (min-width: 640px) {
+  .containerr {
+    max-width: 640px;
+  }
+}
+
+/* Medium (md) ≥ 768px */
+@media (min-width: 768px) {
+  .containerr {
+    max-width: 768px;
+  }
+}
+
+/* Large (lg) ≥ 1024px */
+@media (min-width: 1024px) {
+  .containerr {
+    max-width: 1024px;
+  }
+}
+
+/* Extra Large (xl) ≥ 1280px */
+@media (min-width: 1280px) {
+  .containerr {
+    max-width: 1280px;
+  }
+}
+
+/* 2XL ≥ 1536px */
+@media (min-width: 1600px) {
+  .containerr {
+    max-width: 1600px;
+  }
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  background: var(--yellow);
+  color: var(--white);
+  padding: 20px 50px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  overflow: hidden;
+}
+.btn p {
+  z-index: 2 !important;
+  position: relative;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.btn:hover::after {
+  bottom: 0;
+}
+.btn:hover p {
+  color: var(--white) !important;
+}
+.btn:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  background: black;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  z-index: 1;
+}
