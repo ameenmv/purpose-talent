@@ -1,9 +1,7 @@
 <template>
   <div class="home">
-    
-
-      <Landing />
-
+    <Landing />
+    <Section2 />
   </div>
 </template>
 
@@ -13,12 +11,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import Landing from "../components/Landing.vue";
+import Section2 from "../components/section2.vue";
 
 export default {
   name: "Home",
   components: {
-
     Landing,
+    Section2,
   },
   mounted() {
     // gsap.to(".section1", {
