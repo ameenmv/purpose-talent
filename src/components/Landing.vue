@@ -1,5 +1,6 @@
 <template>
-  <section class="landing">
+  <Navbar />
+  <section class="landing relative h-[100vh]">
     <div class="containerr gap-3">
       <div class="flex justify-center items-center">
         <div class="left flex justify-center items-center w-[50%]">
@@ -8,17 +9,17 @@
         <div class="right flex flex-col justify-center w-[50%] gap-[4vw]">
           <div class="flex flex-col mt-[-20px]">
             <h1
-              class="text-[150px] font-bold rotate-[-2.2deg] ml-[-12vw] h-[130px] items-center flex uppercase relative afterr"
+              class="text-[8.6vw] font-bold rotate-[-2.2deg] ml-[-12vw] h-[130px] items-center flex uppercase relative afterr"
             >
               work
             </h1>
             <h1
-              class="text-[150px] font-bold font-var(--cairo) rotate-[1.3deg] h-[130px] items-center flex uppercase"
+              class="text-[8.6vw] font-bold font-var(--cairo) rotate-[1.3deg] h-[130px] items-center flex uppercase"
             >
               that
             </h1>
             <h1
-              class="text-[150px] font-bold rotate-[-1.9deg] h-[130px] items-center flex uppercase"
+              class="text-[8.6vw] font-bold rotate-[-1.9deg] h-[130px] items-center flex uppercase"
             >
               matters
             </h1>
@@ -43,18 +44,23 @@
         </div>
       </div>
     </div>
+    <img class="absrb" src="../assets/absrb.svg" alt="" />
   </section>
 </template>
 
 <script>
+import Navbar from "./Navbar.vue";
+
 export default {
   name: "Landing",
+  components: {
+    Navbar,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .landing {
-  height: calc(100% - 75px);
   display: flex;
   align-items: center;
 }
@@ -77,5 +83,11 @@ export default {
 }
 h1 {
   font-family: var(--cairo);
+}
+
+.absrb {
+  width: 12.3vw;
+  position: absolute;
+  inset: auto 0% -4.3vw auto;
 }
 </style>
